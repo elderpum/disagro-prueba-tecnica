@@ -7,6 +7,8 @@ import ItemForm from './components/ItemForm';
 import ConfirmationsList from './components/ConfirmationsList';
 import ConfirmationDetail from './components/ConfirmationDetail';
 import ConfirmationForm from './components/ConfirmationForm';
+import UsersList from './components/UsersList';
+import UserForm from './components/UserForm';
 import NotFound from './components/NotFound';
 import { useAuth } from './hooks/useAuth';
 import { apiService } from './services/api';
@@ -189,6 +191,54 @@ function App() {
                     isAuthenticated ? (
                         <AdminShell userName={user?.name} userRole={user?.role} onLogout={logout}>
                             <ConfirmationDetail />
+                        </AdminShell>
+                    ) : (
+                        <Navigate to="/login" replace />
+                    )
+                }
+            />
+            <Route
+                path="/admin/users"
+                element={
+                    isAuthenticated ? (
+                        <AdminShell userName={user?.name} userRole={user?.role} onLogout={logout}>
+                            <UsersList />
+                        </AdminShell>
+                    ) : (
+                        <Navigate to="/login" replace />
+                    )
+                }
+            />
+            <Route
+                path="/admin/users/nuevo"
+                element={
+                    isAuthenticated ? (
+                        <AdminShell userName={user?.name} userRole={user?.role} onLogout={logout}>
+                            <UserForm />
+                        </AdminShell>
+                    ) : (
+                        <Navigate to="/login" replace />
+                    )
+                }
+            />
+            <Route
+                path="/admin/users/editar/:id"
+                element={
+                    isAuthenticated ? (
+                        <AdminShell userName={user?.name} userRole={user?.role} onLogout={logout}>
+                            <UserForm />
+                        </AdminShell>
+                    ) : (
+                        <Navigate to="/login" replace />
+                    )
+                }
+            />
+            <Route
+                path="/admin/users/detalle/:id"
+                element={
+                    isAuthenticated ? (
+                        <AdminShell userName={user?.name} userRole={user?.role} onLogout={logout}>
+                            <UserForm />
                         </AdminShell>
                     ) : (
                         <Navigate to="/login" replace />

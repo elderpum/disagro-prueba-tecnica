@@ -27,6 +27,9 @@ export default function Home({ userName, userRole }: HomeProps) {
                     <Link to="/admin/confirmations" className="btn btn-outline-primary">
                         <i className="fas fa-calendar-check me-2"></i>Confirmaciones
                     </Link>
+                    <Link to="/admin/users" className="btn btn-outline-primary">
+                        <i className="fas fa-users me-2"></i>Usuarios
+                    </Link>
                 </div>
             </div>
         </div>

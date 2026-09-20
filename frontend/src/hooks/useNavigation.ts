@@ -52,6 +52,12 @@ export function useNavigation(): UseNavigationReturn {
                     icon: 'fas fa-calendar-check',
                     route: '/admin/confirmations',
                 },
+                {
+                    type: 'link',
+                    label: 'Usuarios',
+                    icon: 'fas fa-users',
+                    route: '/admin/users',
+                },
             ],
         },
         {
