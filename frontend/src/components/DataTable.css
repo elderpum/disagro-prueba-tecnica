@@ -1,0 +1,65 @@
+@import '../styles/base.css';
+
+/* ===== ESTILOS DEL COMPONENTE DATA TABLE ===== */
+
+.data-table-container {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.data-table-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table-search .input-group-text {
+    background-color: var(--primary-very-light);
+    border-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.data-table-search .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem var(--primary-light);
+}
+
+/* Mejoras para la tabla */
+.tablaEstilos {
+    margin-bottom: 0;
+}
+
+.tablaEstilos tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.tablaEstilos tbody tr:hover {
+    background-color: var(--primary-very-light) !important;
+}
+
+/* Paginación */
+.pagination .page-link {
+    color: var(--primary);
+    border-color: var(--primary-light);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-very-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+}
+

@@ -1,0 +1,64 @@
+@import '../styles/base.css';
+
+/* ===== ESTILOS ESPECÍFICOS DE HOME ===== */
+
+.home-container {
+    min-height: calc(100vh - 56px);
+    background-color: #f8f9fa;
+    padding: 2rem;
+    padding-bottom: 2rem;
+}
+
+.welcome-section {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.welcome-section h1 {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.welcome-section .lead {
+    color: #495057;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hover-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hover-card h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.hover-card .text-muted {
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+}
+
+.hover-card .btn {
+    margin-top: auto;
+}
+

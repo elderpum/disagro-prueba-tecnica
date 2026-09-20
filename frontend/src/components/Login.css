@@ -1,0 +1,100 @@
+@import '../styles/base.css';
+
+/* ===== ESTILOS ESPECÍFICOS DE LOGIN ===== */
+
+.login-body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.login-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(46, 125, 50, 0.75), rgba(27, 94, 32, 0.8)),
+                var(--login-bg-image) center/cover no-repeat;
+    z-index: 0;
+}
+
+.login-body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.login-card {
+    max-width: 450px;
+    width: 100%;
+    border-radius: var(--border-radius-xl);
+    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.login-card .card-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.login-card .form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.login-card .form-control {
+    border-radius: var(--border-radius);
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.login-card .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem var(--primary-light);
+}
+
+.login-card .btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-card .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.login-card .btn-primary:disabled {
+    opacity: 0.7;
+    transform: none;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-danger {
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: rgba(var(--danger-color), 0.1);
+    color: rgb(var(--danger-color));
+    border-left: 4px solid rgb(var(--danger-color));
+}
+
