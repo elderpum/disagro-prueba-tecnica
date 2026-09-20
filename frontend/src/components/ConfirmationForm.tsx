@@ -7,13 +7,18 @@ import {
 } from '../services/confirmationsService';
 import './ConfirmationForm.css';
 
+const formatDateTimeLocal = (date: Date = new Date()): string => {
+    const pad = (n: number) => String(n).padStart(2, '0');
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+};
+
 export default function ConfirmationForm() {
     const [items, setItems] = useState<Item[]>([]);
     const [selectedIds, setSelectedIds] = useState<number[]>([]);
     const [clientName, setClientName] = useState('');
     const [clientLastname, setClientLastname] = useState('');
     const [clientEmail, setClientEmail] = useState('');
-    const [eventDateTime, setEventDateTime] = useState('');
+    const [eventDateTime, setEventDateTime] = useState(formatDateTimeLocal);
     const [discounts, setDiscounts] = useState<DiscountResult | null>(null);
     const [loading, setLoading] = useState(true);
     const [submitting, setSubmitting] = useState(false);
@@ -87,7 +92,7 @@ export default function ConfirmationForm() {
             setClientName('');
             setClientLastname('');
             setClientEmail('');
-            setEventDateTime('');
+            setEventDateTime(formatDateTimeLocal());
             setSelectedIds([]);
             setDiscounts(null);
         } else {
